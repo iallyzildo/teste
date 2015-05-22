@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Agendamento_ProvaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Agendamento_ProvaModelStoreContainer">
+    <EntitySet Name="Agendamento" EntityType="Agendamento_ProvaModel.Store.Agendamento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Medico" EntityType="Agendamento_ProvaModel.Store.Medico" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Motivo" EntityType="Agendamento_ProvaModel.Store.Motivo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Paciente" EntityType="Agendamento_ProvaModel.Store.Paciente" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Agendamento_Medico" Association="Agendamento_ProvaModel.Store.FK_Agendamento_Medico">
+      <End Role="Medico" EntitySet="Medico" />
+      <End Role="Agendamento" EntitySet="Agendamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agendamento_Motivo" Association="Agendamento_ProvaModel.Store.FK_Agendamento_Motivo">
+      <End Role="Motivo" EntitySet="Motivo" />
+      <End Role="Agendamento" EntitySet="Agendamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agendamento_Paciente" Association="Agendamento_ProvaModel.Store.FK_Agendamento_Paciente">
+      <End Role="Paciente" EntitySet="Paciente" />
+      <End Role="Agendamento" EntitySet="Agendamento" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Agendamento">
+    <Key>
+      <PropertyRef Name="IdAgendamento" />
+    </Key>
+    <Property Name="IdAgendamento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Data" Type="date" Nullable="false" />
+    <Property Name="Hora" Type="time" Nullable="false" />
+    <Property Name="IdPaciente" Type="int" Nullable="false" />
+    <Property Name="IdMedico" Type="int" Nullable="false" />
+    <Property Name="IdMotivo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Medico">
+    <Key>
+      <PropertyRef Name="IdMedico" />
+    </Key>
+    <Property Name="IdMedico" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CRM" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Motivo">
+    <Key>
+      <PropertyRef Name="IdMotivo" />
+    </Key>
+    <Property Name="IdMotivo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Paciente">
+    <Key>
+      <PropertyRef Name="IdPaciente" />
+    </Key>
+    <Property Name="IdPaciente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Telefone" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_Agendamento_Medico">
+    <End Role="Medico" Type="Agendamento_ProvaModel.Store.Medico" Multiplicity="1" />
+    <End Role="Agendamento" Type="Agendamento_ProvaModel.Store.Agendamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medico">
+        <PropertyRef Name="IdMedico" />
+      </Principal>
+      <Dependent Role="Agendamento">
+        <PropertyRef Name="IdMedico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agendamento_Motivo">
+    <End Role="Motivo" Type="Agendamento_ProvaModel.Store.Motivo" Multiplicity="1" />
+    <End Role="Agendamento" Type="Agendamento_ProvaModel.Store.Agendamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Motivo">
+        <PropertyRef Name="IdMotivo" />
+      </Principal>
+      <Dependent Role="Agendamento">
+        <PropertyRef Name="IdMotivo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agendamento_Paciente">
+    <End Role="Paciente" Type="Agendamento_ProvaModel.Store.Paciente" Multiplicity="1" />
+    <End Role="Agendamento" Type="Agendamento_ProvaModel.Store.Agendamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paciente">
+        <PropertyRef Name="IdPaciente" />
+      </Principal>
+      <Dependent Role="Agendamento">
+        <PropertyRef Name="IdPaciente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

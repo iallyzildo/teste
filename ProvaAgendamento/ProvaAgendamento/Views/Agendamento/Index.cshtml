@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ProvaAgendamento.Entity.Agendamento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Edit", new { id = 0 })
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hora)
+        </th>
+        <th>
+            Paciente
+        </th>
+        <th>
+            Médico
+        </th>
+        <th>
+            Motivo
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Paciente.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medico.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Motivo.Descricao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.IdAgendamento }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IdAgendamento }, new { @onclick = "return confirm('Tem certeza?');" })
+        </td>
+    </tr>
+}
+
+</table>

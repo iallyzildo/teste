@@ -1,0 +1,6 @@
+CREATE TABLE TipoEndereco
+(
+	IdTipoEndereco INTEGER NOT NULL IDENTITY(1,1),
+	Descricao VARCHAR(50) NOT NULL,
+	CONSTRAINT PK_TipoEndereco PRIMARY KEY (IdTipoEndereco)
+)

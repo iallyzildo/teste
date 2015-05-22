@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Agendamento_ProvaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="Agendamento_ProvaModelStoreContainer">
+          <EntitySet Name="Agendamento" EntityType="Agendamento_ProvaModel.Store.Agendamento" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Medico" EntityType="Agendamento_ProvaModel.Store.Medico" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Motivo" EntityType="Agendamento_ProvaModel.Store.Motivo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Paciente" EntityType="Agendamento_ProvaModel.Store.Paciente" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Agendamento_Medico" Association="Agendamento_ProvaModel.Store.FK_Agendamento_Medico">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="Agendamento" EntitySet="Agendamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Agendamento_Motivo" Association="Agendamento_ProvaModel.Store.FK_Agendamento_Motivo">
+            <End Role="Motivo" EntitySet="Motivo" />
+            <End Role="Agendamento" EntitySet="Agendamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Agendamento_Paciente" Association="Agendamento_ProvaModel.Store.FK_Agendamento_Paciente">
+            <End Role="Paciente" EntitySet="Paciente" />
+            <End Role="Agendamento" EntitySet="Agendamento" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Agendamento">
+          <Key>
+            <PropertyRef Name="IdAgendamento" />
+          </Key>
+          <Property Name="IdAgendamento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="date" Nullable="false" />
+          <Property Name="Hora" Type="time" Nullable="false" />
+          <Property Name="IdPaciente" Type="int" Nullable="false" />
+          <Property Name="IdMedico" Type="int" Nullable="false" />
+          <Property Name="IdMotivo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Medico">
+          <Key>
+            <PropertyRef Name="IdMedico" />
+          </Key>
+          <Property Name="IdMedico" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="CRM" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Motivo">
+          <Key>
+            <PropertyRef Name="IdMotivo" />
+          </Key>
+          <Property Name="IdMotivo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Paciente">
+          <Key>
+            <PropertyRef Name="IdPaciente" />
+          </Key>
+          <Property Name="IdPaciente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Telefone" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK_Agendamento_Medico">
+          <End Role="Medico" Type="Agendamento_ProvaModel.Store.Medico" Multiplicity="1" />
+          <End Role="Agendamento" Type="Agendamento_ProvaModel.Store.Agendamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="IdMedico" />
+            </Principal>
+            <Dependent Role="Agendamento">
+              <PropertyRef Name="IdMedico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Agendamento_Motivo">
+          <End Role="Motivo" Type="Agendamento_ProvaModel.Store.Motivo" Multiplicity="1" />
+          <End Role="Agendamento" Type="Agendamento_ProvaModel.Store.Agendamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Motivo">
+              <PropertyRef Name="IdMotivo" />
+            </Principal>
+            <Dependent Role="Agendamento">
+              <PropertyRef Name="IdMotivo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Agendamento_Paciente">
+          <End Role="Paciente" Type="Agendamento_ProvaModel.Store.Paciente" Multiplicity="1" />
+          <End Role="Agendamento" Type="Agendamento_ProvaModel.Store.Agendamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paciente">
+              <PropertyRef Name="IdPaciente" />
+            </Principal>
+            <Dependent Role="Agendamento">
+              <PropertyRef Name="IdPaciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Agendamento_ProvaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Agendamento_ProvaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Agendamento" EntityType="Agendamento_ProvaModel.Agendamento" />
+          <EntitySet Name="Medico" EntityType="Agendamento_ProvaModel.Medico" />
+          <EntitySet Name="Motivo" EntityType="Agendamento_ProvaModel.Motivo" />
+          <EntitySet Name="Paciente" EntityType="Agendamento_ProvaModel.Paciente" />
+          <AssociationSet Name="FK_Agendamento_Medico" Association="Agendamento_ProvaModel.FK_Agendamento_Medico">
+            <End Role="Medico" EntitySet="Medico" />
+            <End Role="Agendamento" EntitySet="Agendamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Agendamento_Motivo" Association="Agendamento_ProvaModel.FK_Agendamento_Motivo">
+            <End Role="Motivo" EntitySet="Motivo" />
+            <End Role="Agendamento" EntitySet="Agendamento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Agendamento_Paciente" Association="Agendamento_ProvaModel.FK_Agendamento_Paciente">
+            <End Role="Paciente" EntitySet="Paciente" />
+            <End Role="Agendamento" EntitySet="Agendamento" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Agendamento">
+          <Key>
+            <PropertyRef Name="IdAgendamento" />
+          </Key>
+          <Property Name="IdAgendamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Data" Type="DateTime" Nullable="false" />
+          <Property Name="Hora" Type="Time" Nullable="false" />
+          <Property Name="IdPaciente" Type="Int32" Nullable="false" />
+          <Property Name="IdMedico" Type="Int32" Nullable="false" />
+          <Property Name="IdMotivo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Medico" Relationship="Agendamento_ProvaModel.FK_Agendamento_Medico" FromRole="Agendamento" ToRole="Medico" />
+          <NavigationProperty Name="Motivo" Relationship="Agendamento_ProvaModel.FK_Agendamento_Motivo" FromRole="Agendamento" ToRole="Motivo" />
+          <NavigationProperty Name="Paciente" Relationship="Agendamento_ProvaModel.FK_Agendamento_Paciente" FromRole="Agendamento" ToRole="Paciente" />
+        </EntityType>
+        <EntityType Name="Medico">
+          <Key>
+            <PropertyRef Name="IdMedico" />
+          </Key>
+          <Property Name="IdMedico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CRM" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Agendamento" Relationship="Agendamento_ProvaModel.FK_Agendamento_Medico" FromRole="Medico" ToRole="Agendamento" />
+        </EntityType>
+        <EntityType Name="Motivo">
+          <Key>
+            <PropertyRef Name="IdMotivo" />
+          </Key>
+          <Property Name="IdMotivo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descricao" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Agendamento" Relationship="Agendamento_ProvaModel.FK_Agendamento_Motivo" FromRole="Motivo" ToRole="Agendamento" />
+        </EntityType>
+        <EntityType Name="Paciente">
+          <Key>
+            <PropertyRef Name="IdPaciente" />
+          </Key>
+          <Property Name="IdPaciente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Telefone" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Agendamento" Relationship="Agendamento_ProvaModel.FK_Agendamento_Paciente" FromRole="Paciente" ToRole="Agendamento" />
+        </EntityType>
+        <Association Name="FK_Agendamento_Medico">
+          <End Role="Medico" Type="Agendamento_ProvaModel.Medico" Multiplicity="1" />
+          <End Role="Agendamento" Type="Agendamento_ProvaModel.Agendamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medico">
+              <PropertyRef Name="IdMedico" />
+            </Principal>
+            <Dependent Role="Agendamento">
+              <PropertyRef Name="IdMedico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Agendamento_Motivo">
+          <End Role="Motivo" Type="Agendamento_ProvaModel.Motivo" Multiplicity="1" />
+          <End Role="Agendamento" Type="Agendamento_ProvaModel.Agendamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Motivo">
+              <PropertyRef Name="IdMotivo" />
+            </Principal>
+            <Dependent Role="Agendamento">
+              <PropertyRef Name="IdMotivo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Agendamento_Paciente">
+          <End Role="Paciente" Type="Agendamento_ProvaModel.Paciente" Multiplicity="1" />
+          <End Role="Agendamento" Type="Agendamento_ProvaModel.Agendamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paciente">
+              <PropertyRef Name="IdPaciente" />
+            </Principal>
+            <Dependent Role="Agendamento">
+              <PropertyRef Name="IdPaciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Agendamento_ProvaModelStoreContainer" CdmEntityContainer="Agendamento_ProvaEntities">
+          <EntitySetMapping Name="Agendamento"><EntityTypeMapping TypeName="Agendamento_ProvaModel.Agendamento"><MappingFragment StoreEntitySet="Agendamento">
+            <ScalarProperty Name="IdAgendamento" ColumnName="IdAgendamento" />
+            <ScalarProperty Name="Data" ColumnName="Data" />
+            <ScalarProperty Name="Hora" ColumnName="Hora" />
+            <ScalarProperty Name="IdPaciente" ColumnName="IdPaciente" />
+            <ScalarProperty Name="IdMedico" ColumnName="IdMedico" />
+            <ScalarProperty Name="IdMotivo" ColumnName="IdMotivo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Medico"><EntityTypeMapping TypeName="Agendamento_ProvaModel.Medico"><MappingFragment StoreEntitySet="Medico">
+            <ScalarProperty Name="IdMedico" ColumnName="IdMedico" />
+            <ScalarProperty Name="Nome" ColumnName="Nome" />
+            <ScalarProperty Name="CRM" ColumnName="CRM" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Motivo"><EntityTypeMapping TypeName="Agendamento_ProvaModel.Motivo"><MappingFragment StoreEntitySet="Motivo">
+            <ScalarProperty Name="IdMotivo" ColumnName="IdMotivo" />
+            <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Paciente"><EntityTypeMapping TypeName="Agendamento_ProvaModel.Paciente"><MappingFragment StoreEntitySet="Paciente">
+            <ScalarProperty Name="IdPaciente" ColumnName="IdPaciente" />
+            <ScalarProperty Name="Nome" ColumnName="Nome" />
+            <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Agendamento">
+        <EntityTypeShape EntityType="Agendamento_ProvaModel.Agendamento" Width="1.5" PointX="3" PointY="1" Height="2.4140429687499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agendamento_ProvaModel.Medico" Width="1.5" PointX="0.75" PointY="1.375" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agendamento_ProvaModel.Motivo" Width="1.5" PointX="0.75" PointY="4.375" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Agendamento_ProvaModel.Paciente" Width="1.5" PointX="0.75" PointY="6.5" Height="1.5923063151041665" IsExpanded="true" />
+        <AssociationConnector Association="Agendamento_ProvaModel.FK_Agendamento_Medico" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.1711531575520837" />
+          <ConnectorPoint PointX="3" PointY="2.1711531575520837" />
+        </AssociationConnector>
+        <AssociationConnector Association="Agendamento_ProvaModel.FK_Agendamento_Motivo" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.0889794921875" />
+          <ConnectorPoint PointX="3.2604141666666666" PointY="5.0889794921874989" />
+          <ConnectorPoint PointX="3.4270808333333336" PointY="5.0889794921875" />
+          <ConnectorPoint PointX="3.75" PointY="5.0889794921875" />
+          <ConnectorPoint PointX="3.75" PointY="3.4140429687499996" />
+        </AssociationConnector>
+        <AssociationConnector Association="Agendamento_ProvaModel.FK_Agendamento_Paciente" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.2961531575520837" />
+          <ConnectorPoint PointX="3.3437475" PointY="7.2961531575520837" />
+          <ConnectorPoint PointX="3.3437475" PointY="3.4140429687499996" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

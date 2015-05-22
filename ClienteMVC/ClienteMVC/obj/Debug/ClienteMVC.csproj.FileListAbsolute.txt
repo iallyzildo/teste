@@ -1,0 +1,100 @@
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\ClienteMVC.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\ClienteMVC.pdb
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\Antlr3.Runtime.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.AspNet.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.Core.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OAuth.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OpenId.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\EntityFramework.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\Microsoft.Web.Infrastructure.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\Newtonsoft.Json.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Net.Http.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Net.Http.Formatting.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Net.Http.WebRequest.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Helpers.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Http.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Http.WebHost.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Mvc.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Optimization.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Razor.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.Deployment.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.Razor.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\WebGrease.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\WebMatrix.Data.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\WebMatrix.WebData.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\EntityFramework.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\Newtonsoft.Json.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Net.Http.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Net.Http.Formatting.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Net.Http.WebRequest.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Helpers.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Http.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Http.WebHost.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Mvc.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Razor.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.Deployment.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.Razor.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\WebMatrix.Data.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\WebMatrix.WebData.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.AspNet.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.Core.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OAuth.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OpenId.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\DSIAN\ClienteMVC\ClienteMVC\obj\Debug\ResolveAssemblyReference.cache
+D:\DSIAN\ClienteMVC\ClienteMVC\obj\Debug\ClienteMVC.dll
+D:\DSIAN\ClienteMVC\ClienteMVC\obj\Debug\ClienteMVC.pdb
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\ClienteMVC.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\ClienteMVC.pdb
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\Antlr3.Runtime.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.Core.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\EntityFramework.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\Newtonsoft.Json.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Net.Http.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Net.Http.WebRequest.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Helpers.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Mvc.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Optimization.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Razor.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\WebGrease.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\WebMatrix.Data.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\WebMatrix.WebData.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\EntityFramework.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\Newtonsoft.Json.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Net.Http.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Net.Http.WebRequest.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Helpers.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Mvc.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.Razor.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\System.Web.WebPages.Razor.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\WebMatrix.Data.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\WebMatrix.WebData.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.Core.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\obj\Debug\ClienteMVC.csprojResolveAssemblyReference.cache
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\obj\Debug\ClienteMVC.dll
+C:\Users\Ially Leandro\Desktop\DSIAN\ClienteMVC\ClienteMVC\obj\Debug\ClienteMVC.pdb

@@ -1,0 +1,45 @@
+﻿@model ClienteMVC.ViewModels.TipoEnderecoViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tipos de Endereço</h2>
+
+
+<div class="editor-label">
+    <b>Pesquisar:</b>
+</div>
+
+<div class="editor-field">
+    @Html.Editor("q")
+</div>
+
+<p><input type="button" value="Novo" /></p>
+
+<div id ="Lista">
+    @Html.Partial("List", Model.tiposEndereco)
+</div>
+
+<div id="Dados">
+
+</div>
+
+<script>
+    function carregarTabela(q) {
+        $.ajax({
+            type: "GET",
+            dataType: "html",
+            url: "TipoENdereco/List",
+            data: { q: q },
+            success: function (data) {
+                $("#Lista").html(data);
+            }
+        });
+    }
+
+    $("#q").keyup(function () {
+        carregarTabela($("#q").val());
+    });
+
+</script>

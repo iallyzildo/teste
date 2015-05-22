@@ -1,0 +1,82 @@
+﻿@model ProvaAgendamento.Entity.Agendamento
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>@ViewBag.Titulo</h2>
+
+@using (Html.BeginForm()) {
+
+    <fieldset>
+        <legend>Agendamento</legend>
+
+        @Html.HiddenFor(model => model.IdAgendamento)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Data)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Data)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Hora)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Hora)
+        </div>
+
+        <div class="editor-label">
+            <b>Paciente</b>
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IdPaciente")
+        </div>
+
+        <div class="editor-label">
+            <b>Médico</b>
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IdMedico")
+        </div>
+
+        <div class="editor-label">
+            <b>Motivo</b>
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IdMotivo")
+        </div>
+
+        <p>
+            <input type="submit" value="Salvar" onclick="return validar()" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index")
+</div>
+
+@if (ViewBag.Erro != null && ViewBag.Erro != "")
+{
+    <script>
+        alert('@Html.Raw(ViewBag.Erro)');
+    </script>
+}
+
+<script>
+    $("#Data").datepicker({ dateFormat: 'dd-mm-yy' });
+    $("#Hora").mask("00:00:00");
+    function validar() {
+        if ($("#Data").val() == "") {
+            alert("Data Obrigatória");
+            return false;
+        }
+        if ($("#Hora").val() == "") {
+            alert("Hora Obrigatória");
+            return false;
+        }
+        return true;
+    }
+</script>
